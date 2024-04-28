@@ -1,19 +1,3 @@
-// import React from 'react';
-
-// const ErrorPage = () => {
-//     return (
-//         <div>
-//             <h1></h1>
-//         </div>
-//     );
-// };
-
-// export default ErrorPage;
-
-
-
-
-import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { Link, useRouteError } from 'react-router-dom';

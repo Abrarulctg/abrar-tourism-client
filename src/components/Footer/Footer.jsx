@@ -8,7 +8,7 @@ const Footer = () => {
                     <div className="lg:w-2/6 w-full lg:ml-10">
                         <div className="py-6 lg:py-10 space-y-3 text-center lg:text-left">
                             <div className='flex justify-center'>
-                                <img src={mainLogo} className='w-2/4' alt="" />
+                                <img src={mainLogo} className='w-3/4 h-32 rounded' alt="" />
                             </div>
                             <p>Embark on Unforgettable Journeys with Abrar Tourism: Your Ultimate Passport to Adventure, Discovery, and Lifelong Memories Across Every Corner of the Globe, Where Dreams Meet Reality!</p>
                         </div>
