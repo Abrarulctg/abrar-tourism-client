@@ -1,0 +1,200 @@
+[
+    {
+        "image_url": "https://i.ibb.co/jTcmxFP/Al-Dayr-Petra-Jordan.webp",
+        "tourist_spot_name": "Petra",
+        "country_name": "Jordan",
+        "location": "Ma'an Governorate, Jordan",
+        "short_description": "Petra is an ancient city located in the Ma'an Governorate of Jordan, famous for its rock-cut architecture and water conduit system. Established possibly as early as 312 BC, it was the capital city of the Nabataean Kingdom. Petra is renowned for its intricate rock-cut structures, most notably the Treasury (Al-Khazneh) and the Monastery (Ad Deir). Visitors can explore the archaeological site, hike through the surrounding mountains, and marvel at the stunning desert landscape. Petra is a UNESCO World Heritage Site and one of the New Seven Wonders of the World.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Best visited in spring (March to May) and autumn (September to November)",
+        "travel_time": "2-3 days",
+        "total_visitors_per_year": 800000
+    },
+    {
+        "image_url": "https://i.ibb.co/D7kgXN7/2023-08-13.jpg",
+        "tourist_spot_name": "Wadi Rum",
+        "country_name": "Jordan",
+        "location": "Aqaba Governorate, Jordan",
+        "short_description": "Wadi Rum, also known as the Valley of the Moon, is a desert valley located in southern Jordan. It is known for its stunning red sand dunes, towering rock formations, and ancient petroglyphs. Wadi Rum's otherworldly landscape has been featured in numerous films, including Lawrence of Arabia and The Martian. Visitors can explore the desert by jeep, camel, or on foot, and experience traditional Bedouin hospitality at one of the many desert camps. Wadi Rum is a popular destination for adventure tourism, offering activities such as hiking, rock climbing, and hot air ballooning.",
+        "average_cost": "$100-$200 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 500000
+    },
+    {
+        "image_url": "https://i.ibb.co/TMxwtFx/licensed-image.jpg",
+        "tourist_spot_name": "Jerash",
+        "country_name": "Jordan",
+        "location": "Jerash Governorate, Jordan",
+        "short_description": "Jerash is an ancient city located in northern Jordan, known for its well-preserved Roman ruins. Founded around the 4th century BC, Jerash flourished as a Greco-Roman city and is now one of the best-preserved Roman provincial towns in the world. Visitors to Jerash can explore its impressive archaeological sites, including the Oval Plaza, the Temple of Artemis, and the Hippodrome. The city's annual Jerash Festival showcases Jordanian culture through music, dance, and theater, attracting visitors from around the world.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 300000
+    },
+    {
+        "image_url": "https://i.ibb.co/8dVYtqG/licensed-image-1.jpg",
+        "tourist_spot_name": "Al-Ula",
+        "country_name": "Saudi Arabia",
+        "location": "Al Madinah Province, Saudi Arabia",
+        "short_description": "Al-Ula is an archaeological site located in the Al Madinah Province of Saudi Arabia, renowned for its spectacular rock formations and ancient ruins. It was once a major center along the Incense Route and is home to several historical landmarks, including the UNESCO-listed Hegra (Mada'in Saleh) and the ancient city of Dadan. Visitors to Al-Ula can explore the ruins, hike through the desert landscape, and experience traditional Saudi hospitality at local guesthouses. Al-Ula is also known for its annual Winter at Tantora festival, featuring concerts, cultural events, and hot air balloon rides.",
+        "average_cost": "$100-$200 per day",
+        "seasonality": "Best visited in winter (November to March)",
+        "travel_time": "2-3 days",
+        "total_visitors_per_year": 200000
+    },
+    {
+        "image_url": "https://i.ibb.co/dk1wvXz/Downloader-la-620ecd96c75d5.jpg",
+        "tourist_spot_name": "Riyadh",
+        "country_name": "Saudi Arabia",
+        "location": "Riyadh Province, Saudi Arabia",
+        "short_description": "Riyadh is the capital city of Saudi Arabia and the largest city in the Arabian Peninsula. It is a dynamic metropolis known for its modern architecture, bustling souks, and vibrant cultural scene. Visitors to Riyadh can explore iconic landmarks such as the Kingdom Centre Tower, the Masmak Fortress, and the National Museum. The city's historic Diriyah district offers a glimpse into Saudi Arabia's rich heritage, while the Diplomatic Quarter is home to embassies and luxury hotels. Riyadh also serves as a gateway to the desert, with nearby attractions including the Edge of the World and the Red Sand Dunes.",
+        "average_cost": "$100-$200 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "2-3 days",
+        "total_visitors_per_year": 1000000
+    },
+    {
+        "image_url": "https://i.ibb.co/4gHC7GT/Exploring-Abha-The-Jewel.jpg",
+        "tourist_spot_name": "Abha",
+        "country_name": "Saudi Arabia",
+        "location": "Asir Province, Saudi Arabia",
+        "short_description": "Abha is a city located in the Asir Province of Saudi Arabia, known for its cool climate, lush greenery, and stunning mountain scenery. Situated at an elevation of over 2,200 meters (7,200 feet) above sea level, Abha offers respite from the heat of the desert and is a popular summer destination for Saudis and tourists alike. Visitors to Abha can explore its picturesque parks, visit traditional villages, and enjoy panoramic views of the surrounding mountains from the cable car. Abha is also known for its vibrant cultural scene, with festivals, markets, and live music performances throughout the year.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Best visited in summer (June to August)",
+        "travel_time": "2-3 days",
+        "total_visitors_per_year": 500000
+    },
+    {
+        "image_url": "https://i.ibb.co/0ZyZCMJ/burj-khalifa-tickets-price-1-Pg-Swqmmdg.webp",
+        "tourist_spot_name": "Burj Khalifa",
+        "country_name": "United Arab Emirates",
+        "location": "Downtown Dubai, United Arab Emirates",
+        "short_description": "The Burj Khalifa is the tallest building in the world, located in Downtown Dubai, United Arab Emirates. Standing at 828 meters (2,717 feet), it dominates the city skyline and is a symbol of Dubai's modernity and ambition. Visitors can take a high-speed elevator to the observation decks on the 124th and 148th floors, offering panoramic views of the city and beyond. The Burj Khalifa is also home to luxury apartments, offices, restaurants, and the world-renowned Armani Hotel. At the base of the tower lies the beautiful Dubai Fountain, the largest choreographed fountain system in the world, which dazzles visitors with nightly water and light shows set to music.",
+        "average_cost": "$100-$200 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 2000000
+    },
+    {
+        "image_url": "https://i.ibb.co/0CSXrsr/download.jpg",
+        "tourist_spot_name": "Sheikh Zayed Grand Mosque",
+        "country_name": "United Arab Emirates",
+        "location": "Abu Dhabi, United Arab Emirates",
+        "short_description": "The Sheikh Zayed Grand Mosque is one of the largest mosques in the world and a masterpiece of Islamic architecture. Located in Abu Dhabi, United Arab Emirates, the mosque was named after Sheikh Zayed bin Sultan Al Nahyan, the founder and first President of the UAE. It features stunning white marble domes, intricate floral patterns, and exquisite calligraphy, creating a serene and majestic atmosphere. Visitors can explore the mosque's expansive courtyard, prayer halls, and beautiful reflective pools. The Sheikh Zayed Grand Mosque is open to visitors of all faiths and serves as a symbol of tolerance, diversity, and cultural heritage.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 3000000
+    },
+    {
+        "image_url": "https://i.ibb.co/dBtm1Jw/licensed-image-2.jpg",
+        "tourist_spot_name": "Palm Jumeirah",
+        "country_name": "United Arab Emirates",
+        "location": "Dubai, United Arab Emirates",
+        "short_description": "Palm Jumeirah is an artificial archipelago in Dubai, United Arab Emirates, shaped like a palm tree. It is one of the largest artificial islands in the world and a symbol of Dubai's innovation and luxury. Palm Jumeirah is home to luxurious hotels, beachfront villas, upscale restaurants, and shopping malls, making it a popular destination for tourists and residents alike. Visitors can enjoy a wide range of activities such as swimming, sunbathing, water sports, and fine dining. The iconic Atlantis, The Palm resort is located at the apex of Palm Jumeirah, offering world-class accommodations, entertainment, and dining experiences.",
+        "average_cost": "$200-$300 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "2-3 days",
+        "total_visitors_per_year": 4000000
+    },
+    {
+        "image_url": "https://i.ibb.co/p2ZtHkd/persepolis.jpg",
+        "tourist_spot_name": "Persepolis",
+        "country_name": "Iran",
+        "location": "Shiraz, Fars Province, Iran",
+        "short_description": "Persepolis, also known as Takht-e Jamshid, was the ceremonial capital of the Achaemenid Empire, located near the city of Shiraz in present-day Iran. It was founded by Darius the Great in the 6th century BCE and served as the center of Persian power and culture for over two centuries. Persepolis is famous for its impressive ruins, including monumental staircases, palaces, and reliefs depicting scenes from Persian mythology and history. Despite being partially destroyed by Alexander the Great in 330 BCE, Persepolis remains one of the most important archaeological sites in Iran and a UNESCO World Heritage Site.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Best visited in spring (March to May) and autumn (September to November)",
+        "travel_time": "3-5 days",
+        "total_visitors_per_year": 500000
+    },
+    {
+        "image_url": "https://i.ibb.co/rsQDKXf/unnamed.jpg",
+        "tourist_spot_name": "Isfahan",
+        "country_name": "Iran",
+        "location": "Isfahan, Iran",
+        "short_description": "Isfahan, historically also rendered in English as Ispahan, is the capital of Isfahan Province in Iran and one of the oldest cities in the world. It is famous for its stunning Islamic architecture, grand boulevards, and picturesque bridges. Isfahan served as the capital of the Safavid Empire from 1598 to 1722 and was once one of the largest cities in the world. Visitors to Isfahan can explore iconic landmarks such as the Imam Square (Naqsh-e Jahan Square), the Imam Mosque, Sheikh Lotfollah Mosque, and the Ali Qapu Palace. Isfahan's rich cultural heritage and vibrant bazaars make it a must-visit destination for travelers exploring Iran.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "3-4 days",
+        "total_visitors_per_year": 1000000
+    },
+    {
+        "image_url": "https://i.ibb.co/dgmhrbP/eram-garden-in-shiraz.jpg",
+        "tourist_spot_name": "Shiraz",
+        "country_name": "Iran",
+        "location": "Shiraz, Fars Province, Iran",
+        "short_description": "Shiraz is the cultural and historical heart of Iran, known for its beautiful gardens, poetic literature, and exquisite mosques. Located in the Fars Province, Shiraz has been a center of Persian culture for over 2,000 years and is considered one of the oldest cities in the world. Visitors to Shiraz can explore iconic sites such as the Nasir al-Mulk Mosque (Pink Mosque), the UNESCO-listed Persepolis, and the tomb of the Persian poet Hafez. Shiraz is also famous for its vineyards and the production of Persian rugs, making it a paradise for art and history enthusiasts.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "2-3 days",
+        "total_visitors_per_year": 1500000
+    },
+    {
+        "image_url": "https://i.ibb.co/QJ3Qwhg/licensed-image-3.jpg",
+        "tourist_spot_name": "The Pearl-Qatar",
+        "country_name": "Qatar",
+        "location": "Doha, Qatar",
+        "short_description": "The Pearl-Qatar is an artificial island located in the West Bay Lagoon area of Doha, Qatar. It is one of the most luxurious and prestigious residential and entertainment destinations in the country. The Pearl-Qatar features upscale residences, luxury hotels, marinas, shopping malls, and restaurants, all set against a backdrop of beautiful beaches and turquoise waters. Visitors to The Pearl-Qatar can explore its vibrant waterfront promenades, relax at beach clubs, or indulge in shopping and dining experiences at the island's numerous boutiques and eateries.",
+        "average_cost": "$200-$300 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "2-3 days",
+        "total_visitors_per_year": 1000000
+    },
+    {
+        "image_url": "https://i.ibb.co/qM28gDY/Souq-Waqif-qatar-doha.webp",
+        "tourist_spot_name": "Souq Waqif",
+        "country_name": "Qatar",
+        "location": "Doha, Qatar",
+        "short_description": "Souq Waqif is a traditional market located in the heart of Doha, Qatar. It dates back over a hundred years and is one of the oldest souqs in the Arabian Gulf region. Souq Waqif is known for its labyrinthine alleyways, bustling bazaars, and vibrant atmosphere. Visitors can explore a wide range of shops selling traditional garments, spices, handicrafts, and souvenirs, as well as enjoy street performances, live music, and cultural events. Souq Waqif is also home to numerous cafes, restaurants, and shisha lounges, making it a popular destination for locals and tourists alike.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 2000000
+    },
+    {
+        "image_url": "https://i.ibb.co/hYVMBQ9/katara-photo-big-2-1201x800.jpg",
+        "tourist_spot_name": "Katara Cultural Village",
+        "country_name": "Qatar",
+        "location": "Doha, Qatar",
+        "short_description": "Katara Cultural Village is a waterfront cultural complex located in Doha, Qatar. It is dedicated to celebrating and promoting Qatari heritage, arts, and culture. Katara features a wide range of facilities and attractions, including theaters, art galleries, museums, performance venues, and traditional Qatari architecture. Visitors to Katara can attend cultural events, exhibitions, and workshops, or simply explore the beautifully landscaped grounds and stunning architecture. The village also hosts international festivals and events throughout the year, showcasing the richness and diversity of global cultures.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 1500000
+    },
+    {
+        "image_url": "https://i.ibb.co/88DcMXn/avenue-mall-biggest-shopping-kuwait-600nw-1933081172.webp",
+        "tourist_spot_name": "The Avenues Mall",
+        "country_name": "Kuwait",
+        "location": "Kuwait City, Kuwait",
+        "short_description": "The Avenues Mall is the largest shopping mall in Kuwait and one of the largest malls in the Middle East. Located in the capital city of Kuwait City, The Avenues offers a luxurious and diverse shopping experience, with over 800 stores featuring international and local brands, designer boutiques, and department stores. In addition to shopping, The Avenues Mall boasts a wide range of dining options, entertainment facilities, and family-friendly attractions, including cinemas, arcades, and indoor playgrounds. With its modern architecture, spacious layout, and world-class amenities, The Avenues Mall is a must-visit destination for shoppers and leisure seekers.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 5000000
+    },
+    {
+        "image_url": "https://i.ibb.co/pzwYPQH/Kuwait-1770b4a9405-large.jpg",
+        "tourist_spot_name": "Kuwait Towers",
+        "country_name": "Kuwait",
+        "location": "Kuwait City, Kuwait",
+        "short_description": "The Kuwait Towers are iconic landmarks and a symbol of Kuwait's modernity and progress. Located in the heart of Kuwait City, the towers consist of three slender towers topped with distinctive blue-green spheres. The main tower features a revolving observation deck and restaurant offering panoramic views of the city skyline and the Arabian Gulf. The Kuwait Towers also house a water reservoir, pumping station, and entertainment complex. Visitors can learn about Kuwait's history, culture, and heritage at the towers' exhibitions and museums, making it a must-visit destination for tourists and residents alike.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 1000000
+    },
+    {
+        "image_url": "https://i.ibb.co/4PbxMC2/licensed-image-4.jpg",
+        "tourist_spot_name": "Failaka Island",
+        "country_name": "Kuwait",
+        "location": "Failaka Island, Kuwait",
+        "short_description": "Failaka Island is an island located off the coast of Kuwait in the Persian Gulf. It is known for its archaeological sites, including ruins dating back to the Dilmun civilization, which flourished in the region around 2000 BCE. Visitors to Failaka Island can explore ancient temples, tombs, and settlements, as well as enjoy the island's beaches and natural beauty. The island also has a museum showcasing artifacts discovered during archaeological excavations, providing insights into Kuwait's rich history and heritage.",
+        "average_cost": "$50-$100 per day",
+        "seasonality": "Year-round destination",
+        "travel_time": "1-2 days",
+        "total_visitors_per_year": 300000
+    }
+]
