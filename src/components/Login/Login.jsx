@@ -4,6 +4,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { FaFacebook, FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash, FaTwitter } from "react-icons/fa";
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { signInWithPopup } from 'firebase/auth';
 
 const Login = () => {
     const { signInUser, signInWithGoogle, signInWithGithub, signInWithFacebook, signInWithTwitter } = useContext(AuthContext);
@@ -73,17 +74,20 @@ const Login = () => {
             });
     }
 
+    //Github Sign in 
 
-    // Github Sign in
     const handleGithubSignIn = () => {
         signInWithGithub()
             .then(() => {
-                successToast();
+                successToast()
                 navigate(from)
-                // console.log(result.user);
             })
-            .catch(err => errorToast(err.message))
+            .catch(err => {
+                errorToast(err.message);
+            })
     }
+
+
 
     //Facebook Sign in
     const handleFacebookLogin = () => {
