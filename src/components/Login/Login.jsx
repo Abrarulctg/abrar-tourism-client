@@ -88,7 +88,6 @@ const Login = () => {
     }
 
 
-
     //Facebook Sign in
     const handleFacebookLogin = () => {
         signInWithFacebook()

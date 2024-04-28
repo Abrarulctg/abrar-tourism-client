@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import mainLogo from '../../assets/about-page-logo.png';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -23,7 +24,7 @@ const Header = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 border">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +34,7 @@ const Header = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <img className='w-[200px]' src={mainLogo} alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -45,13 +46,14 @@ const Header = () => {
                         <div>
                             <a id="clickable">
                                 <div className='w-10 h-10'>
-                                    <img className='rounded-full w-14 h-14 mr-2 bg-white p-1' src={user.photoURL} alt="" />
+                                    <img className='rounded-full w-16 h-14 mr-2 bg-white p-1' src={user.photoURL} alt="" />
                                 </div>
                             </a>
                             {/* bg-[#AFC4DD] */}
                             <Tooltip className='' anchorSelect="#clickable" clickable>
                                 <div className='flex flex-col'>
                                     <p className='mb-3 bg-[#AFC4DD] text-[#ff9123] font-bold p-3 rounded-xl'>{user.displayName}</p>
+                                    <Link to="/myAccount"><button className='mb-3 bg-[#AFC4DD] text-[#000] p-3 rounded-xl'>My Account</button></Link>
                                     <button onClick={handleSignOut} className='mb-3 bg-[#AFC4DD] text-[#000] p-3 rounded-xl'>Logout</button>
                                 </div>
                             </Tooltip>
