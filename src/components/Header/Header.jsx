@@ -23,7 +23,7 @@ const Header = () => {
         <li><NavLink className="ml-4" to='/contactUs'>Contact Us</NavLink></li>
     </>
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import seasonalityImg from '../../assets/seasonality.jpg';
-
-import { FaMagnifyingGlassLocation } from "react-icons/fa6";
+import { CiLocationOn } from "react-icons/ci";
 import TouristSpots from '../TouristSpots/TouristSpots';
 
 
@@ -38,7 +37,7 @@ const TouristSpot = () => {
 
 
     return (
-        <div className='mb-5'>
+        <div className='max-w-6xl mx-auto mb-5'>
             <div className="hero min-h-96 rounded-xl my-8" style={{ backgroundImage: `url(${photo})` }}>
                 <div className="hero-overlay rounded-xl bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
@@ -55,17 +54,17 @@ const TouristSpot = () => {
             <div className="stats shadow w-full">
                 <div className="stat place-items-center">
                     <div className="stat-title font-bold">Total Visit</div>
-                    <div className="stat-value">{totalVisit}</div>
+                    <div className="stat-value text-[#002366]">{totalVisit}</div>
                     <div className="stat-desc">Per Year</div>
                 </div>
                 <div className="stat place-items-center">
                     <div className="stat-title font-bold">Average Cost</div>
-                    <div className="stat-value text-secondary">${averageCost}</div>
-                    <div className="stat-desc text-secondary">Per day</div>
+                    <div className="stat-value text-[#002366]">${averageCost}</div>
+                    <div className="stat-desc">Per day</div>
                 </div>
                 <div className="stat place-items-center">
                     <div className="stat-title font-bold">Travel Time</div>
-                    <div className="stat-value">{travelTime}</div>
+                    <div className="stat-value text-[#002366]">{travelTime}</div>
                     <div className="stat-desc">Days</div>
                 </div>
             </div>
@@ -80,7 +79,7 @@ const TouristSpot = () => {
                 </div>
             </div>
             <div className='flex flex-col md:flex-row'>
-                <h1 className="mb-5 text-xl font-bold text-[#FBA707] flex items-center"><FaMagnifyingGlassLocation /> Location:</h1>
+                <h1 className="mb-5 text-xl font-bold text-[#FBA707] flex items-center"><CiLocationOn /> Location:</h1>
                 <h1 className="mb-5 text-xl font-bold text-[#002366] ml-2">{location}</h1>
             </div>
 

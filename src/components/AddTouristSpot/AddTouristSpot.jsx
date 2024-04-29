@@ -73,7 +73,7 @@ const AddTouristSpot = () => {
             })
     }
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
             <ToastContainer />
             <Helmet>
                 <title>Abrar Tourism | Add Tourist Spots</title>

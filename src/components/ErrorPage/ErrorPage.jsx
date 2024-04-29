@@ -7,7 +7,7 @@ const ErrorPage = () => {
     const error = useRouteError();
 
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
             <Header></Header>
             <div className="flex justify-center my-16">
                 <div className="text-center  space-y-4">

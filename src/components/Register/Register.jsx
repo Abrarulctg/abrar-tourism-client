@@ -88,7 +88,7 @@ const Register = () => {
 
     }
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
             <Helmet>
                 <title>Abrar Tourism | Register</title>
                 <meta name="description" content="Helmet application" />

@@ -76,7 +76,7 @@ const UpdateTouristSpot = () => {
     }
 
     return (
-        <div>
+        <div className="max-w-6xl mx-auto">
             <ToastContainer />
             <Helmet>
                 <title>Abrar Tourism | Update Tourist Spots</title>
