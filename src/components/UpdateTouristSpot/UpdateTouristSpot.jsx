@@ -1,8 +1,10 @@
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { Helmet } from "react-helmet";
+import { useLoaderData } from 'react-router-dom';
 
-const AddTouristSpot = () => {
-
+const UpdateTouristSpot = () => {
+    const { data } = useLoaderData();
+    console.log(data)
 
 
     const successToast = (successMessage) => toast.success(successMessage, {
@@ -31,7 +33,7 @@ const AddTouristSpot = () => {
 
 
 
-    const handleSubmit = e => {
+    const handleUpdate = e => {
         e.preventDefault();
         const form = e.target;
 
@@ -50,50 +52,51 @@ const AddTouristSpot = () => {
         console.log(newTouristSpot)
 
         //send data to server
-        fetch('http://localhost:5000/touristSpot', {
-            method: "POST",
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newTouristSpot)
-        })
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data)
-                if (data.insertedId) {
-                    successToast("Data inserted to MongoDB!")
-                    form.reset();
-                }
-                else {
-                    errorToast("Data not inserted!")
-                }
-            })
-            .catch(() => {
-                errorToast("Something went Wrong!")
-            })
+        // fetch('http://localhost:5000/touristSpot', {
+        //     method: "POST",
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(newTouristSpot)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         // console.log(data)
+        //         if (data.insertedId) {
+        //             successToast("Data Updated to Successfully!")
+        //             form.reset();
+        //         }
+        //         else {
+        //             errorToast("Data not Updated to Successfully")
+        //         }
+        //     })
+        //     .catch(() => {
+        //         errorToast("Something went Wrong!")
+        //     })
     }
+
     return (
         <div>
             <ToastContainer />
             <Helmet>
-                <title>Abrar Tourism | Add Tourist Spots</title>
+                <title>Abrar Tourism | Update Tourist Spots</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
 
             <div>
-                <h1 className="text-3xl font-extrabold my-4 text-center ">Add Tourist Spot</h1>
-                <form onSubmit={handleSubmit}>
+                <h1 className="text-3xl font-extrabold my-4 text-center ">Update Tourist Spot</h1>
+                <form onSubmit={handleUpdate}>
                     {/* form row  |  Photo URL */}
                     <div className="md:flex gap-4">
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll w-full">
-                            <input type="text" name="photo" className="w-full" placeholder="Photo URL" />
+                            <input type="text" name="photo" className="" placeholder="Photo URL" />
                         </label>
 
                     </div>
                     {/* form row || Tourist Spot Name and Country*/}
                     <div className="md:flex gap-4">
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/2">
-                            <input type="text" name="touristSpotName" className="w-full" placeholder="Tourist Spot Name" />
+                            <input type="text" name="touristSpotName" className="" placeholder="Tourist Spot Name" />
                         </label>
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/2">
                             <input type="text" name="country" className="grow" placeholder="Country Name" />
@@ -103,7 +106,7 @@ const AddTouristSpot = () => {
                     {/* form row || location and aveeeage cost*/}
                     <div className="md:flex gap-4">
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/2">
-                            <input type="text" name="location" className="grow" placeholder="Tourist Spot Location" />
+                            <input type="text" name="location" className="" placeholder="Tourist Spot Location" />
                         </label>
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/2">
                             <input type="text" name="averageCost" className="grow" placeholder="Average Cost" />
@@ -112,13 +115,13 @@ const AddTouristSpot = () => {
                     {/* form row || Description*/}
                     <div className="md:flex gap-4">
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll w-full">
-                            <input type="text" name="description" className="grow" placeholder="Description" />
+                            <input type="text" name="description" className="" placeholder="Description" />
                         </label>
                     </div>
                     {/* form row || Seasonality and travelTime*/}
                     <div className="md:flex gap-4">
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/2">
-                            <input type="text" name="seasonality" className="grow" placeholder="Seasonality" />
+                            <input type="text" name="seasonality" className="" placeholder="Seasonality" />
                         </label>
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/2">
                             <input type="text" name="travelTime" className="grow" placeholder="Travel Time" />
@@ -127,7 +130,7 @@ const AddTouristSpot = () => {
                     {/* form row || Total Visit, user Email and User Name*/}
                     <div className="md:flex gap-4">
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/3">
-                            <input type="text" name="totalVisit" className="grow" placeholder="Total Visit Per Year" />
+                            <input type="text" name="totalVisit" className="" placeholder="Total Visit Per Year" />
                         </label>
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/3">
                             <input type="text" name="userEmail" className="grow" placeholder="User Email" />
@@ -136,11 +139,11 @@ const AddTouristSpot = () => {
                             <input type="text" name="userName" className="grow" placeholder="User Name" />
                         </label>
                     </div>
-                    <input className='btn btn-block' type="submit" value="Add Tourist Spot" />
+                    <input className='btn btn-block' type="submit" value="Update Tourist Spot" />
                 </form>
             </div>
         </div>
     );
 };
 
-export default AddTouristSpot;
+export default UpdateTouristSpot;
