@@ -19,6 +19,7 @@ import AuthProvider from './components/AuthProvider/AuthProvider.jsx';
 import MyAccount from './components/MyAccount/MyAccount.jsx';
 import AddTouristSpot from './components/AddTouristSpot/AddTouristSpot.jsx';
 import UpdateTouristSpot from './components/UpdateTouristSpot/UpdateTouristSpot.jsx';
+import TouristSpot from './components/TouristSpot/TouristSpot.jsx';
 
 
 const router = createBrowserRouter([
@@ -29,11 +30,17 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/touristSpot')
       },
       {
         path: "/allTouristSpot",
         element: <AllTouristSpot></AllTouristSpot>
+      },
+      {
+        path: "/TouristSpot/:id",
+        element: <TouristSpot></TouristSpot>,
+        loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
       },
       {
         path: "/myList",
