@@ -20,6 +20,7 @@ import MyAccount from './components/MyAccount/MyAccount.jsx';
 import AddTouristSpot from './components/AddTouristSpot/AddTouristSpot.jsx';
 import UpdateTouristSpot from './components/UpdateTouristSpot/UpdateTouristSpot.jsx';
 import TouristSpot from './components/TouristSpot/TouristSpot.jsx';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -40,12 +41,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/TouristSpot/:id",
-        element: <TouristSpot></TouristSpot>,
+        element: <PrivateRoute><TouristSpot></TouristSpot></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
       },
       {
         path: "/myList",
-        element: <MyList></MyList>
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/touristSpot')
       },
       {
         path: "/aboutUs",
@@ -65,15 +67,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/myAccount",
-        element: <MyAccount></MyAccount>
+        element: <PrivateRoute><MyAccount></MyAccount></PrivateRoute>
       },
       {
         path: "/addTouristSpot",
-        element: <AddTouristSpot></AddTouristSpot>
+        element: <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
       },
       {
         path: "/updateTouristSpot",
-        element: <UpdateTouristSpot></UpdateTouristSpot>,
+        element: <PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
       },
 

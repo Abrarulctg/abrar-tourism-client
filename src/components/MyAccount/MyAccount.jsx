@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Helmet } from "react-helmet";
-
+import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { updateProfile } from 'firebase/auth';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
@@ -54,13 +54,18 @@ const MyAccount = () => {
             .then(() => {
                 setUser({ ...user, displayName: name, photoURL: photoUrl })
                 successToast();
+                // e.form.reset();
+                setName("");
+                setPhotoUrl("");
             })
             .catch(error => errorToast(error.message))
     }
     return (
         <div>
+            <ToastContainer />
+
             <Helmet>
-                <title>Abrar Estate | User Profile</title>
+                <title>Abrar Tourism | User Profile</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <div className='max-w-6xl mx-auto '>

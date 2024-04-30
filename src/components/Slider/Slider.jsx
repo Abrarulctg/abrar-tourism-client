@@ -13,7 +13,7 @@ import slider7 from '../../assets/slider/unnamed.jpg';
 
 const Slider = () => {
     return (
-        <div className='mb-6'>
+        <div className='mb-6 z-0'>
             <Carousel showThumbs={false}>
                 <img className='rounded-xl' src={slider1} alt="" />
                 <img className='rounded-xl' src={slider2} alt="" />

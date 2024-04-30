@@ -46,13 +46,13 @@ const Header = () => {
                         <div>
                             <a id="clickable">
                                 <div className='w-10 h-10'>
-                                    <img className='rounded-full w-16 h-14 mr-2 bg-white p-1' src={user.photoURL} alt="" />
+                                    <img className='rounded-full w-16 h-10 mr-2 bg-white p-1 border border-red-400' src={user.photoURL || "https://i.ibb.co/XX4DwkF/default-user.webps"} alt="" />
                                 </div>
                             </a>
                             {/* bg-[#AFC4DD] */}
-                            <Tooltip className='' anchorSelect="#clickable" clickable>
+                            <Tooltip className='z-9999' anchorSelect="#clickable" clickable>
                                 <div className='flex flex-col'>
-                                    <p className='mb-3 bg-[#AFC4DD] text-[#ff9123] font-bold p-3 rounded-xl'>{user.displayName}</p>
+                                    <p className='mb-3  text-[#ff9123] font-bold p-3 rounded-xl'>{user.displayName}</p>
                                     <Link to="/myAccount"><button className='mb-3 bg-[#AFC4DD] text-[#000] p-3 rounded-xl'>My Account</button></Link>
                                     <button onClick={handleSignOut} className='mb-3 btn btn-success text-[#000] p-3 rounded-xl'>Logout</button>
                                 </div>

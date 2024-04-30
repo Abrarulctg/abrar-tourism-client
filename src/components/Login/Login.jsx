@@ -144,7 +144,7 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
 
-                                <input className='btn btn-primary' type="submit" value="Login" />
+                                <input className='btn bg-[#0B274E] hover:bg-[#082651] text-white' type="submit" value="Login" />
                             </div>
                         </form>
                         <p className='text-center mb-4'>New to Abrar Estate? Please <NavLink to="/register" className="font-[500] text-purple-950">Register</NavLink></p>

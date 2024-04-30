@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from 'react-router-dom';
 import TouristSpots from '../TouristSpots/TouristSpots';
@@ -7,6 +7,34 @@ import { FaEye } from 'react-icons/fa';
 
 const AllTouristSpot = () => {
     const allTouristSpot = useLoaderData();
+    // const [allSpot, setAllSpot] = useState([]);
+    // const [sortedTouristSpot, setSortedTouristSpot] = useState([]);
+    // console.log("Unsorted Data", allSpot);
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/touristSpot')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setAllSpot(data);
+    //             setSortedTouristSpot(data);
+    //         })
+    // }, [])
+
+    const handleSortBtn = sortedPara => {
+        console.log("btn clicked", sortedPara)
+        // if (sortedPara === "averageCost") {
+        //     const sortedData = allSpot.sort((a, b) => {
+        //         const firstStrNumber = a.averageCost;
+        //         const SecondStrNumber = b.averageCost;
+        //         const firstNumber = parseInt(firstStrNumber);
+        //         const SecondNumber = parseInt(SecondStrNumber);
+        //         return SecondNumber - firstNumber;
+        //     })
+        //     // setSortedTouristSpot(allSpot);
+        //     setAllSpot(sortedData);
+        // }
+
+    }
+
 
     return (
         <div className='max-w-6xl mx-auto'>
@@ -27,9 +55,20 @@ const AllTouristSpot = () => {
                 </div>
             </div>
 
+            {/* ================Sort button ===================*/}
+            <div className='flex justify-center'>
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn m-1 btn-success">Sort By:</div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a onClick={() => handleSortBtn("averageCost")} className='btn btn-success mb-1'>Average Cost</a></li>
+                        <li><a onClick={() => handleSortBtn("totalVisitor")} className='btn btn-success'>Total Visitor</a></li>
+                    </ul>
+                </div>
+            </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto'>
+
                 {
-                    allTouristSpot.map(touristSpot => <div>
+                    allTouristSpot.map(touristSpot => <div key={touristSpot._id}>
                         <div className="card card-compact bg-base-100 shadow-xl mb-4">
                             <figure>
                                 <div className="hero rounded-xl" style={{ backgroundImage: `url('${touristSpot.photo}')` }}>
