@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { FaPenNib } from "react-icons/fa6";
@@ -6,15 +6,61 @@ import { RiDeleteBin2Fill, RiDeleteBin2Line } from "react-icons/ri";
 import { MdOutlinePageview } from "react-icons/md";
 import bannerBg from '../../assets/banner-bg.jpg';
 import { Helmet } from "react-helmet";
+import Swal from 'sweetalert2';
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
+    const [touristSpot, setTouristSpot] = useState([]);
+    // const allTouristSpot = useLoaderData();
 
-    const allTouristSpot = useLoaderData();
-    console.log(allTouristSpot)
+    useEffect(() => {
+        fetch('http://localhost:5000/touristSpot')
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                const touristSpotMatchedWithUserEmail = data.filter(touristSpot => touristSpot.userEmail === user.email);
+                setTouristSpot(touristSpotMatchedWithUserEmail);
+            })
+    }, []);
 
-    const touristSpotMatchedWithUserEmail = allTouristSpot.filter(touristSpot => touristSpot.userEmail === user.email);
-    console.log(touristSpotMatchedWithUserEmail)
+    // console.log(allTouristSpot)
+    // console.log(touristSpotMatchedWithUserEmail)
+    // setTouristSpot(touristSpotMatchedWithUserEmail)
+
+    console.log(touristSpot)
+
+    const handleDelete = e => {
+        console.log(e)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/touristSpot/${e}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Tourist Spot has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = touristSpot.filter(spot => spot._id !== e);
+                            setTouristSpot(remaining);
+                        }
+                    })
+            }
+        });
+    }
+
     return (
         <div className='max-w-6xl mx-auto'>
             <Helmet>
@@ -36,7 +82,7 @@ const MyList = () => {
 
 
             {
-                touristSpotMatchedWithUserEmail.length < 1
+                touristSpot.length < 1
                     ?
                     "You have not added any Tourist Spot"
                     :
@@ -57,7 +103,7 @@ const MyList = () => {
                                 <tbody>
                                     {/* row 1 */}
                                     {
-                                        touristSpotMatchedWithUserEmail.map((touristSpot, idx) =>
+                                        touristSpot.map((touristSpot, idx) =>
                                             <tr key={idx} className='hover rounded'>
                                                 <th>{idx + 1}</th>
                                                 <td>{touristSpot.touristSpotName}</td>
@@ -66,8 +112,8 @@ const MyList = () => {
                                                 <td>{touristSpot.totalVisit} <small>/per year</small></td>
                                                 <td>
                                                     <Link to={`/TouristSpot/${touristSpot._id}`}><button className='btn btn-warning py-1 px-5 mr-2' title='View'><MdOutlinePageview /></button></Link>
-                                                    <button className='btn btn-warning'><FaPenNib /></button>
-                                                    <button className='btn btn-error text-white ml-2'><RiDeleteBin2Fill /></button>
+                                                    <button className='btn btn-warning' title='Update'><FaPenNib /></button>
+                                                    <button onClick={() => handleDelete(touristSpot._id)} className='btn btn-error text-white ml-2' title='Delete'><RiDeleteBin2Fill /></button>
                                                 </td>
                                             </tr>)
                                     }

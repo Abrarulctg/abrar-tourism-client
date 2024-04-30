@@ -6,7 +6,8 @@ import bannerBg from '../../assets/banner-bg.jpg';
 import { FaEye } from 'react-icons/fa';
 
 const AllTouristSpot = () => {
-    const allTouristSpot = useLoaderData();
+    // const allTouristSpot = useLoaderData();
+
     // const [allSpot, setAllSpot] = useState([]);
     // const [sortedTouristSpot, setSortedTouristSpot] = useState([]);
     // console.log("Unsorted Data", allSpot);

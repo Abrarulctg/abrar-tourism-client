@@ -53,6 +53,7 @@ const Header = () => {
                             <Tooltip className='z-9999' anchorSelect="#clickable" clickable>
                                 <div className='flex flex-col'>
                                     <p className='mb-3  text-[#ff9123] font-bold p-3 rounded-xl'>{user.displayName}</p>
+                                    <Link to="/addTouristSpot"><button className='mb-3 btn btn-info text-[#000] p-3 rounded-xl'>Add Tourist Spot</button></Link>
                                     <Link to="/myAccount"><button className='mb-3 bg-[#AFC4DD] text-[#000] p-3 rounded-xl'>My Account</button></Link>
                                     <button onClick={handleSignOut} className='mb-3 btn btn-success text-[#000] p-3 rounded-xl'>Logout</button>
                                 </div>
