@@ -84,7 +84,10 @@ const MyList = () => {
             {
                 touristSpot.length < 1
                     ?
-                    "You have not added any Tourist Spot"
+                    <div className='text-center mb-5'>
+                        <h1 className="text-3xl mb-5">You have not added any Tourist Spot!</h1>
+                        <Link to="/addTouristSpot"><button className='btn btn-success'>Add Tourist Spot</button></Link>
+                    </div>
                     :
                     <div>
                         <div className="overflow-x-auto mb-4">
@@ -112,7 +115,7 @@ const MyList = () => {
                                                 <td>{touristSpot.totalVisit} <small>/per year</small></td>
                                                 <td>
                                                     <Link to={`/TouristSpot/${touristSpot._id}`}><button className='btn btn-warning py-1 px-5 mr-2' title='View'><MdOutlinePageview /></button></Link>
-                                                    <button className='btn btn-warning' title='Update'><FaPenNib /></button>
+                                                    <Link to={`/updateTouristSpot/${touristSpot._id}`}><button className='btn btn-warning' title='Update'><FaPenNib /></button></Link>
                                                     <button onClick={() => handleDelete(touristSpot._id)} className='btn btn-error text-white ml-2' title='Delete'><RiDeleteBin2Fill /></button>
                                                 </td>
                                             </tr>)

@@ -21,6 +21,7 @@ const Header = () => {
         <li><NavLink className="ml-4" to='/myList'>My List</NavLink></li>
         <li><NavLink className="ml-4" to='/aboutUs'>About Us</NavLink></li>
         <li><NavLink className="ml-4" to='/contactUs'>Contact Us</NavLink></li>
+        {user && <li><NavLink className="ml-4" to='/addTouristSpot'>Add Tourist Spot</NavLink></li>}
     </>
     return (
         <div className='max-w-6xl mx-auto'>

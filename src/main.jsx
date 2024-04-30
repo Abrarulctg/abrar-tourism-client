@@ -74,7 +74,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
       },
       {
-        path: "/updateTouristSpot",
+        path: "/updateTouristSpot/:id",
         element: <PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
       },

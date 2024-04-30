@@ -1,8 +1,10 @@
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { Helmet } from "react-helmet";
+import { useContext } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const AddTouristSpot = () => {
-
+    const { user } = useContext(AuthContext);
 
 
     const successToast = (successMessage) => toast.success(successMessage, {
@@ -48,6 +50,45 @@ const AddTouristSpot = () => {
         const userName = form.userName.value;
         const newTouristSpot = { photo, touristSpotName, country, location, averageCost, description, seasonality, travelTime, totalVisit, userEmail, userName }
         console.log(newTouristSpot)
+
+        // validation
+        if (photo === "") {
+            errorToast("Photo Field cannot be blank!");
+            return;
+        }
+        if (touristSpotName === "") {
+            errorToast("Tourist Spot name cannot be blank!");
+            return;
+        }
+        if (country === "") {
+            errorToast("Country Field cannot be blank!");
+            return;
+        }
+        if (location === "") {
+            errorToast("Location Field cannot be blank!");
+            return;
+        }
+        if (averageCost === "") {
+            errorToast("Average Cost cannot be blank!");
+            return;
+        }
+        if (description === "") {
+            errorToast("Description cannot be blank!");
+            return;
+        }
+        if (seasonality === "") {
+            errorToast("Seasonality cannot be blank!");
+            return;
+        }
+        if (travelTime === "") {
+            errorToast("Travel Time cannot be blank!");
+            return;
+        }
+        if (totalVisit === "") {
+            errorToast("Total Visit cannot be blank!");
+            return;
+        }
+
 
         //send data to server
         fetch('http://localhost:5000/touristSpot', {
@@ -129,14 +170,14 @@ const AddTouristSpot = () => {
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/3">
                             <input type="text" name="totalVisit" className="grow" placeholder="Total Visit Per Year" />
                         </label>
-                        <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/3">
-                            <input type="text" name="userEmail" className="grow" placeholder="User Email" />
+                        <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/3" disabled>
+                            <input type="text" name="userEmail" className="grow" defaultValue={user.email} placeholder="User Email" disabled />
                         </label>
                         <label className="input input-bordered flex items-center gap-2 mb-4 form-controll md:w-1/3">
-                            <input type="text" name="userName" className="grow" placeholder="User Name" />
+                            <input type="text" name="userName" className="grow" defaultValue={user.displayName} placeholder="User Name" />
                         </label>
                     </div>
-                    <input className='btn btn-block' type="submit" value="Add Tourist Spot" />
+                    <input className='btn btn-outline w-full btn-success mb-5' type="submit" value="Add Tourist Spot" />
                 </form>
             </div>
         </div>
