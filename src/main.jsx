@@ -33,22 +33,22 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/touristSpot')
+        loader: () => fetch('https://abrar-tourism-server.vercel.app/touristSpot')
       },
       {
         path: "/allTouristSpot",
         element: <AllTouristSpot></AllTouristSpot>,
-        loader: () => fetch('http://localhost:5000/touristSpot')
+        loader: () => fetch('https://abrar-tourism-server.vercel.app/touristSpot')
       },
       {
         path: "/TouristSpot/:id",
         element: <PrivateRoute><TouristSpot></TouristSpot></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
+        loader: ({ params }) => fetch(`https://abrar-tourism-server.vercel.app/touristSpot/${params.id}`)
       },
       {
         path: "/myList",
         element: <PrivateRoute><MyList></MyList></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/touristSpot')
+        loader: () => fetch('https://abrar-tourism-server.vercel.app/touristSpot')
       },
       {
         path: "/aboutUs",
@@ -77,26 +77,26 @@ const router = createBrowserRouter([
       {
         path: "/updateTouristSpot/:id",
         element: <PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
+        loader: ({ params }) => fetch(`https://abrar-tourism-server.vercel.app/touristSpot/${params.id}`)
       },
       // {
       //   path: "/touristSpotWithSameCountry/:id",
       //   element: <PrivateRoute><TouristSpotWithSameCountry></TouristSpotWithSameCountry></PrivateRoute>,
-      //   loader: ({ params }) => fetch(`http://localhost:5000/country/${params.id}`)
+      //   loader: ({ params }) => fetch(`https://abrar-tourism-server.vercel.app/country/${params.id}`)
       // },
       {
         path: "/touristSpotWithSameCountry/:id",
         element: <PrivateRoute><TouristSpotWithSameCountry></TouristSpotWithSameCountry></PrivateRoute>,
-        // loader: ({ params }) => fetch(`http://localhost:5000/country/${params.id}`)
+        // loader: ({ params }) => fetch(`https://abrar-tourism-server.vercel.app/country/${params.id}`)
         loader: async ({ params }) => {
           const countryId = params.id;
-          const countryResponse = await fetch(`http://localhost:5000/country/${countryId}`);
+          const countryResponse = await fetch(`https://abrar-tourism-server.vercel.app/country/${countryId}`);
           const countryData = await countryResponse.json();
 
-          const allCountryResponse = await fetch("http://localhost:5000/country");
+          const allCountryResponse = await fetch("https://abrar-tourism-server.vercel.app/country");
           const allCountryNameData = await allCountryResponse.json();
 
-          const allTouristSpotResponse = await fetch('http://localhost:5000/touristSpot');
+          const allTouristSpotResponse = await fetch('https://abrar-tourism-server.vercel.app/touristSpot');
           const allTouristSpotData = await allTouristSpotResponse.json();
 
           // Combine and return the fetched data

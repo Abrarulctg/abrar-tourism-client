@@ -91,7 +91,7 @@ const UpdateTouristSpot = () => {
         }
 
         //send data to server
-        fetch(`http://localhost:5000/touristSpot/${_id}`, {
+        fetch(`https://abrar-tourism-server.vercel.app/touristSpot/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

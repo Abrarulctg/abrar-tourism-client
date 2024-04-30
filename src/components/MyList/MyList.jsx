@@ -14,7 +14,7 @@ const MyList = () => {
     // const allTouristSpot = useLoaderData();
 
     useEffect(() => {
-        fetch('http://localhost:5000/touristSpot')
+        fetch('https://abrar-tourism-server.vercel.app/touristSpot')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -41,7 +41,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/touristSpot/${e}`, {
+                fetch(`https://abrar-tourism-server.vercel.app/touristSpot/${e}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

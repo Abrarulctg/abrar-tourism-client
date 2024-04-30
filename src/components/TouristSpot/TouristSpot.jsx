@@ -15,7 +15,7 @@ const TouristSpot = () => {
     const { _id, photo, touristSpotName, country, averageCost, description, location, seasonality, totalVisit, travelTime } = touristSpot;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/touristSpot/${selectedSpot.id}`)
+        fetch(`https://abrar-tourism-server.vercel.app/touristSpot/${selectedSpot.id}`)
             .then(res => res.json())
             .then(data => {
                 setTouristSpot(data);
@@ -24,7 +24,7 @@ const TouristSpot = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/touristSpot')
+        fetch('https://abrar-tourism-server.vercel.app/touristSpot')
             .then(res => res.json())
             .then(data => {
                 setAllTourstSpots(data);
