@@ -21,6 +21,7 @@ import AddTouristSpot from './components/AddTouristSpot/AddTouristSpot.jsx';
 import UpdateTouristSpot from './components/UpdateTouristSpot/UpdateTouristSpot.jsx';
 import TouristSpot from './components/TouristSpot/TouristSpot.jsx';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
+import TouristSpotWithSameCountry from './components/CountryCard/TouristSpotWithSameCountry.jsx';
 
 
 const router = createBrowserRouter([
@@ -77,6 +78,30 @@ const router = createBrowserRouter([
         path: "/updateTouristSpot/:id",
         element: <PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
+      },
+      // {
+      //   path: "/touristSpotWithSameCountry/:id",
+      //   element: <PrivateRoute><TouristSpotWithSameCountry></TouristSpotWithSameCountry></PrivateRoute>,
+      //   loader: ({ params }) => fetch(`http://localhost:5000/country/${params.id}`)
+      // },
+      {
+        path: "/touristSpotWithSameCountry/:id",
+        element: <PrivateRoute><TouristSpotWithSameCountry></TouristSpotWithSameCountry></PrivateRoute>,
+        // loader: ({ params }) => fetch(`http://localhost:5000/country/${params.id}`)
+        loader: async ({ params }) => {
+          const countryId = params.id;
+          const countryResponse = await fetch(`http://localhost:5000/country/${countryId}`);
+          const countryData = await countryResponse.json();
+
+          const allCountryResponse = await fetch("http://localhost:5000/country");
+          const allCountryNameData = await allCountryResponse.json();
+
+          const allTouristSpotResponse = await fetch('http://localhost:5000/touristSpot');
+          const allTouristSpotData = await allTouristSpotResponse.json();
+
+          // Combine and return the fetched data
+          return { countryData, allTouristSpotData, allCountryNameData };
+        }
       },
 
     ]
