@@ -49,7 +49,7 @@ const AddTouristSpot = () => {
         const userEmail = form.userEmail.value;
         const userName = form.userName.value;
         const newTouristSpot = { photo, touristSpotName, country, location, averageCost, description, seasonality, travelTime, totalVisit, userEmail, userName }
-        console.log(newTouristSpot)
+        // console.log(newTouristSpot)
 
         // validation
         if (photo === "") {

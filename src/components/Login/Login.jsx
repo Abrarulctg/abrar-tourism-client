@@ -107,7 +107,7 @@ const Login = () => {
             .then((res) => {
                 successToast();
                 navigate(from);
-                console.log(res.user)
+                // console.log(res.user)
             })
             .catch(err => {
                 errorToast(err.message)

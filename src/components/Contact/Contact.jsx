@@ -11,7 +11,7 @@ const ContactUs = () => {
 
 
     const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
         successToast();
         reset();
     }

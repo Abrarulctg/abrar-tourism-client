@@ -7,12 +7,12 @@ import { FaEye } from 'react-icons/fa6';
 const TouristSpotWithSameCountry = () => {
     const selectedCountryId = useParams();
     const { countryData, allTouristSpotData, allCountryNameData } = useLoaderData();
-    console.log(countryData)
+    // console.log(countryData)
 
     const matchedCountries = allTouristSpotData.filter(touristSpot => touristSpot.country === countryData.country);
 
-    console.log(allTouristSpotData)
-    console.log(matchedCountries)
+    // console.log(allTouristSpotData)
+    // console.log(matchedCountries)
 
 
 

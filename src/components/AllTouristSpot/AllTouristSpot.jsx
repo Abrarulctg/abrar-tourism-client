@@ -13,10 +13,10 @@ const AllTouristSpot = () => {
         setAllSpot(allTouristSpot)
     }, [allTouristSpot]);
 
-    console.log(allSpot);
+    // console.log(allSpot);
 
     const handleSortBtn = () => {
-        console.log("btn clicked")
+        // console.log("btn clicked")
         const sortedData = [...allSpot].sort((a, b) => parseFloat(a.averageCost) - parseFloat(b.averageCost));
         setAllSpot(sortedData)
         // setUser({ ...user, displayName: name, photoURL: photoUrl })

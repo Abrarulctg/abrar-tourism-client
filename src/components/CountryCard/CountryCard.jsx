@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const CountryCard = (singleCountry) => {
     // const { country } = country;
     const { _id, country, photo, description } = singleCountry.country;
-    console.log(country)
+    // console.log(country)
 
 
     return (

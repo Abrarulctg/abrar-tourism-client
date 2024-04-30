@@ -47,7 +47,7 @@ const MyAccount = () => {
         // const form = new FormData();
         // const name = form.get('name');
         // const photo = form.get('photo');
-        console.log(name, photoUrl);
+        // console.log(name, photoUrl);
         updateProfile(user, {
             displayName: name, photoURL: photoUrl
         })
